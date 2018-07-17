@@ -15,6 +15,9 @@ public class TestController {
 	@RequestMapping(value = "/isAlive", produces = "application/json; charset=utf-8")
     public @ResponseBody String test() throws Exception {
 		
+		
+		
+		
 		return "0000";
     }
 }
