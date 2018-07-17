@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="  
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="genericObjectPoolConfig" class="org.apache.commons.pool2.impl.GenericObjectPoolConfig">
+		<!-- 当连接池资源耗尽时，等待时间，超出则抛异常，默认为-1即永不超时 -->
+		<property name="maxWaitMillis" value="-1" />
+		<!-- 链接池中最大连接数,默认是8 -->
+		<property name="maxTotal" value="1000" />
+		<!-- 连接池中最少空闲的连接数 -->
+		<property name="minIdle" value="20" />
+		<!-- 链接池中最大空闲的连接数 -->
+		<property name="maxIdle" value="100" />
+	</bean>
+
+	<bean id="jedisCluster" class="com.qmc.redis.util.RedisClusterFactory"
+		destroy-method="destory">
+		<property name="clusterUrl">
+			<!-- <value>classpath:connect-redis.properties</value> -->
+			<value>${clusterUrl}</value>
+		</property>
+		<property name="addressKeyPrefix" value="address" />
+		<property name="password" value="${redis.cluster.password}"></property>
+		<property name="timeout" value="300000" />
+		<property name="maxRedirections" value="6" />
+		<property name="genericObjectPoolConfig" ref="genericObjectPoolConfig" />
+		<property name="expireTime" value="2592000" />
+		<!-- <property name="expireTime" value="86400" /> -->
+		<!-- <property name="keyPrefix" value="Comment" /> -->
+	</bean>
+</beans>
