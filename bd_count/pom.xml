@@ -387,7 +387,7 @@
 				<clusterUrl>192.168.1.11:8001</clusterUrl>
 				<redis.cluster.password>123456</redis.cluster.password>
 				<!-- systemid -->
-				<systemid>qm</systemid>
+				<systemid>zt</systemid>
 			
 				<groupIdConfig>bd_count</groupIdConfig>
 				<timeoutMsConfig>30000</timeoutMsConfig>
@@ -408,7 +408,7 @@
 				<groupIdConfig>bd_count</groupIdConfig>
 				<timeoutMsConfig>30000</timeoutMsConfig>
 				<autoCommitIntervalMsConfig>1000</autoCommitIntervalMsConfig>
-				<systemid>qm</systemid>
+				<systemid>zt</systemid>
 				<logger.level>info</logger.level>
 				<logger.file>../logs/bd_count.log</logger.file>
 				<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -425,7 +425,7 @@
 				<task:annotation-driven />
 				]]></taskConfig>
 			
-			
+			<mongo.database>bd_marketing</mongo.database>
 			</properties>
 		</profile>
 		<profile>
@@ -434,7 +434,7 @@
 				<groupIdConfig>bd_count</groupIdConfig>
 				<timeoutMsConfig>30000</timeoutMsConfig>
 				<autoCommitIntervalMsConfig>1000</autoCommitIntervalMsConfig>
-				<systemid>qm</systemid>
+				<systemid>zt</systemid>
 				<taskConfig />
 				<logger.level>info</logger.level>
 				<logger.file>../logs/bd_count.log</logger.file>
@@ -445,10 +445,9 @@
 
 				<database.driverClassName>com.mysql.jdbc.Driver</database.driverClassName>
 
-
 				<lottery.api.version>0.0.13</lottery.api.version>
 			
-				
+				<mongo.database>bd_marketing</mongo.database>
 			</properties>
 		</profile>
 	</profiles>
