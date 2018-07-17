@@ -25,7 +25,7 @@
 				<value>classpath*:/spring/*.properties</value>
 			</list>
 		</property>
-		<property name="appName" value="bd_count" />
+		<property name="appName" value="bdcount" />
 		<property name="profile" value="${qmc.rc.profile}" />
 		<property name="remoteConfigEnabled" value="${qmc.rc.remoteConfigEnabled}" />
 
