@@ -14,10 +14,6 @@ public class TestController {
 	private final static Logger logger = LoggerFactory.getLogger(TestController.class);
 	@RequestMapping(value = "/isAlive", produces = "application/json; charset=utf-8")
     public @ResponseBody String test() throws Exception {
-		
-		
-		
-		
 		return "0000";
     }
 }
