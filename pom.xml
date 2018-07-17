@@ -387,7 +387,7 @@
 				<clusterUrl>192.168.1.11:8001</clusterUrl>
 				<redis.cluster.password>123456</redis.cluster.password>
 				<!-- systemid -->
-				<systemid>zt</systemid>
+				<systemid>qm</systemid>
 			
 				<groupIdConfig>bd_count</groupIdConfig>
 				<timeoutMsConfig>30000</timeoutMsConfig>
@@ -408,7 +408,7 @@
 				<groupIdConfig>bd_count</groupIdConfig>
 				<timeoutMsConfig>30000</timeoutMsConfig>
 				<autoCommitIntervalMsConfig>1000</autoCommitIntervalMsConfig>
-				<systemid>zt</systemid>
+				<systemid>qm</systemid>
 				<logger.level>info</logger.level>
 				<logger.file>../logs/bd_count.log</logger.file>
 				<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -434,7 +434,7 @@
 				<groupIdConfig>bd_count</groupIdConfig>
 				<timeoutMsConfig>30000</timeoutMsConfig>
 				<autoCommitIntervalMsConfig>1000</autoCommitIntervalMsConfig>
-				<systemid>zt</systemid>
+				<systemid>qm</systemid>
 				<taskConfig />
 				<logger.level>info</logger.level>
 				<logger.file>../logs/bd_count.log</logger.file>
