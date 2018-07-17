@@ -32,7 +32,6 @@ public class SubjectCountController {
 	public String browseCount(@RequestParam(value = "parameter")String parameter,
 			@RequestParam(value = "callback", required = false) String callback){
 		long startTime = System.currentTimeMillis();
-		
 		JSONObject result = subjectCountService.browseCount(parameter);
         logger.info("SubjectCountController browseCount controller over time: " + (System.currentTimeMillis()-startTime)+ " ms");
         if(StringUtils.isNotBlank(callback)){
